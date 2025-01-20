@@ -33,7 +33,7 @@ function WrongKeyNotifications()
     OrionLib:MakeNotification({
         Name = "Invalid Key",
         Content = "This key is either invalid or blacklisted",
-        Image = "rbxassetid://77524665153521",
+        Image = "rbxassetid://106860686806742",
         Time = 10
 	})
 end
@@ -54,7 +54,7 @@ Tab:AddTextbox({
 })
 
 Tab:AddButton({
-	Name = "Check Key",
+	Name = "Click Here To Check Key",
 	Callback = function()
         if _G.KeyInput == _G.Key then
          MakeScriptHub()
