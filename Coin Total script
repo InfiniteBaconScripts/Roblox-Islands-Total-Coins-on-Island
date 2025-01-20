@@ -1,1 +1,68 @@
-d
+--[[ islands Coin Key
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/InfiniteBaconScripts/Islandsdupe33/refs/heads/main/key%20system%20for%20dupe%20v3')))()
+local Window = OrionLib:MakeWindow({Name = "Islands Coin Total", HidePremium = true, SaveConfig = true, ConfigFolder = "Islands Dupe V3"})
+
+OrionLib:MakeNotification({
+	Name = "You're in!!",
+	Content = "DM godmoderob on discord for help",
+	Image = "rbxassetid://82489338009618",
+	Time = 20
+})
+
+_G.Key = "islands" -- You Put Your Key Here
+_G.KeyInput = "string"
+
+function MakeScriptHub()
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/allfreescripts5/Freescripts/refs/heads/main/island-coin-total.lua"), true))() -- You Put Your Script Here
+
+end
+
+
+function CorrectKeyNotifications()
+    OrionLib:MakeNotification({
+        Name = "Correct Key",
+        Content = "Enjoy The Islands Coin script",
+        Image = "rbxassetid://4483345998",
+        Time = 10
+    })
+end
+
+function WrongKeyNotifications()
+    OrionLib:MakeNotification({
+        Name = "Invalid Key",
+        Content = "This key is either invalid or blacklisted",
+        Image = "rbxassetid://77524665153521",
+        Time = 10
+	})
+end
+
+local Tab = Window:MakeTab({
+	Name = "Islands Coin Key",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddTextbox({
+	Name = "Please Enter Key",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+        _G.KeyInput = Value
+	end	  
+})
+
+Tab:AddButton({
+	Name = "Check Key",
+	Callback = function()
+        if _G.KeyInput == _G.Key then
+         MakeScriptHub()
+         CorrectKeyNotifications()
+     else
+        WrongKeyNotifications()
+        end
+  	end  
+})
+
+
