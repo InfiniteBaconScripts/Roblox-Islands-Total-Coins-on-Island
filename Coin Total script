@@ -1,7 +1,7 @@
 --[[ islands Coin Key
 	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
 ]]
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/InfiniteBaconScripts/Islandsdupe33/refs/heads/main/key%20system%20for%20dupe%20v3')))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/InfiniteBaconScripts/Roblox-Islands-Total-Coins-on-Island/refs/heads/main/Coin%20Key')))()
 local Window = OrionLib:MakeWindow({Name = "Islands Coin Total", HidePremium = true, SaveConfig = true, ConfigFolder = "Islands Dupe V3"})
 
 OrionLib:MakeNotification({
